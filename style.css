@@ -1,0 +1,275 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f5f7fa;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+.h7 {
+  color:red;
+     position: relative;
+     font-family: sans-serif;
+     text-transform: uppercase;
+     font-size: 20px;
+     letter-spacing: 4px;
+     overflow: hidden;
+     background: linear-gradient(90deg, #1d2ae1, #fff, #000a92);
+     background-repeat: no-repeat;
+     background-size: 80%;
+     animation: animate 3s linear infinite;
+     -webkit-background-clip: text;
+     -webkit-text-fill-color:rgba(255, 255, 255, 0);
+ 
+   }
+
+   @keyframes animate {
+     0% {
+       background-position: -500%;
+     }
+     100% {
+       background-position: 500%;
+     }
+   }
+   .h9 {
+    color:red;
+       position: relative;
+       font-family: sans-serif;
+       text-transform: uppercase;
+       font-size: 10px;
+       letter-spacing: 4px;
+       overflow: hidden;
+       background: linear-gradient(90deg, #000000, #fff, #000000);
+       background-repeat: no-repeat;
+       background-size: 80%;
+       animation: animate 3s linear infinite;
+       -webkit-background-clip: text;
+       -webkit-text-fill-color:rgba(255, 255, 255, 0);
+   
+     }
+  
+     @keyframes animate {
+       0% {
+         background-position: -500%;
+       }
+       100% {
+         background-position: 500%;
+       }
+     }
+  
+
+.container {
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgb(0, 64, 255);
+  padding: 30px;
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 25px;
+  font-size: 24px;
+  color: #007bff;
+}
+
+.form-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: #555;
+}
+
+select {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  margin-bottom: 20px;
+  border: 2px solid #26005f;
+  border-radius: 8px;
+  background: #a2b6ff;
+  transition: border-color 0.3s;
+}
+
+select:focus {
+  border-color: #007bff;
+}
+
+button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 20px;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.hidden {
+  display: none;
+}
+
+.progress-bar {
+  background-color: #f5f7fa;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-top: 25px;
+  height: 35px;
+  position: relative;
+}
+
+.progress-bar div {
+  height: 100%;
+  background-color: #007bff;
+  width: 0;
+  transition: width 0.5s;
+}
+
+#progressText {
+  margin-top: 15px;
+  font-weight: 600;
+}
+
+.key-item {
+  display: flex;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.key-item input {
+  flex: 1;
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-right: 12px;
+}
+
+.copyKeyBtn {
+  background-color: #28a745;
+  border: none;
+  padding: 12px 20px;
+  color: white;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.copyKeyBtn:hover {
+  background-color: #218838;
+}
+
+.footer {
+  margin-top: 25px;
+  font-size: 14px;
+  color: #777;
+}
+
+#copyStatus {
+  margin-top: 15px;
+  color: green;
+}
+:root {
+--angle: 45deg;
+--opacity: 0.5;
+}
+
+*,
+*::before,
+*::after {
+box-sizing: border-box;
+}
+
+.rainbow {
+width: 250px;
+height: 500px;
+border-radius: 10px;
+padding: 2rem;
+margin: auto;
+border-radius:15px;
+
+display: grid;
+place-content: center;
+text-align: center;
+box-shadow: 0 10px 35px rgb(0, 64, 255);
+border-radius: 25px;
+
+
+--border-size: 0.3rem;
+border: var(--border-size) solid transparent;
+
+/* Paint an image in the border */
+border-image: conic-gradient(
+    from var(--angle),
+    #1f2eff 0deg 20deg,
+    #3b31ff 90deg 180deg,
+    #4e65ff 180deg 270deg,
+    #5967ff 270deg 360deg
+  )
+  1 stretch;
+background: rgb(255 255 255 / var(--opacity));
+}
+
+/** show a warning in browers that don't support it **/
+.warning {
+margin: 2em;
+padding: 1em;
+border: 1px solid #ccc;
+}
+.warning p {
+margin: 0;
+padding: 0;
+text-align: center;
+}
+/* Animate when Houdini is available */
+@supports (background: paint(houdini)) {
+@property --opacity {
+  syntax: "<number>";
+  initial-value: 0.5;
+  inherits: false;
+}
+
+@property --angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+@keyframes opacityChange {
+  to {
+    --opacity: 1;
+  }
+}
+
+@keyframes rotate {
+  to {
+    --angle: 360deg;
+  }
+}
+
+.rainbow {
+  animation: rotate 4s linear infinite, opacityChange 3s infinite alternate;
+}
+
+/* Hide the warning */
+.warning {
+  display: none;
+}
+}
+
+
