@@ -229,9 +229,6 @@ document.addEventListener('DOMContentLoaded', () => {
         keyCountGroup.style.display = 'block';
     });
 
-    sourceCode.addEventListener('click', () => {
-        window.open('https://github.com/ShafiqSadat/HamsterKeyGenWeb', '_blank');
-    });
 
     const generateClientId = () => {
         const timestamp = Date.now();
