@@ -99,7 +99,6 @@ label {
 select {
   width: 100%;
   padding: 8px 5px;
-
   font-size: 16px;
   margin-bottom: 20px;
   border: 2px solid #d5b9ff;
@@ -149,7 +148,7 @@ button:hover {
   margin-top: 25px;
   height: 35px;
   position: relative;
-  border: #001eff 3px solid;
+  border: #ff00ea80 3px solid;
 }
 
 .progress-bar div {
